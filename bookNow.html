@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>login</title>
+  <style>
+    body {
+      background: url('book.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      color: whitesmoke;
+    }
+
+    #close {
+      display: inline-block;
+      padding: 2px 5px;
+      background: #ccc;
+      position: absolute;
+      left: 90%;
+      top: 5%;
+      font-size: 20px;
+    }
+
+    #close:hover {
+      color: whitesmoke;
+      background-color: red;
+    }
+
+    #bookBox {
+      height: 80vh;
+      width: 70%;
+      margin-left: 1%;
+      margin-top: 5%;
+      font-size: 23px;
+    }
+
+    #tname,
+    #age,
+    #password,
+    #email,
+    #phone {
+      width: 40%;
+      height: 4vh;
+      border-radius: 5px;
+      font-size: 20px;
+    }
+
+    #clickit {
+      font-size: 15px;
+      border-radius: 40px;
+      height: 40px;
+      width: 130px;
+      margin-left: 40%;
+
+      cursor: pointer;
+    }
+
+    .all-get {
+      position: absolute;
+      left: 60%;
+      top: 10%;
+    }
+  </style>
+</head>
+
+<body>
+  <a href="index.html"><span id='close'>x</span></a>
+  <div id="bookBox" class="hidden">
+    <form id="bookForm" name="bookDataHere" action="bookdata.php" method="post">
+      <label for="tname">Traveler Name:</label><br>
+      <input type="text" id="tname" name="travelName" required placeholder="Full name (As per Govt.ID)"><br><br>
+
+      <label for="age">Age:</label><br>
+      <input type="number" id="age" name="age" required placeholder="Enter your age....."><br><br>
+
+      <label for="email">Email:</label><br>
+      <input type="email" name="email" name="email" id="email" placeholder="Enter your email....." required><br><br>
+
+      <label for="phone">Phone:</label><br>
+      <input type="number" name="phone" id="phone" placeholder="Enter your phone....." required><br><br>
+
+      <label for="gender">Gender:</label><br>
+      <input type="radio" name="gender" value="male"> Male
+      <input type="radio" name="gender" value="female"> Female<br><br>
+
+      <label>
+        Date:<input type="date" name="date" id="date">
+      </label><br><br>
+      <div class="all-get">
+        <div id="travel-vehicle" for="travel-preference">
+          <h3>Travel Preference</h3>
+          <input type="checkbox" id="car" name="vehicle" value="car">
+          <label for="car">Car</label><br>
+          <input type="checkbox" id="bus" name="vehicle" value="bus">
+          <label for="bus">Bus</label><br>
+          <input type="checkbox" id="train" name="vehicle" value="train">
+          <label for="train">Train</label><br>
+          <input type="checkbox" id="bike" name="vehicle" value="bike">
+          <label for="bike">Bike</label><br>
+          <input type="checkbox" id="flight" name="vehicle" value="flight">
+          <label for="flight">Flight</label><br>
+        </div>
+
+
+        <div id="car-options" style="display: none;">
+          <h3>Car Options:</h3>
+          <input type="radio" id="jeep" name="car-type" value="100">
+          <label for="jeep">Jeep ($100)</label><br>
+          <input type="radio" id="noramal_car" name="car-type" value="150">
+          <label for="normal_car">Normal Car ($150)</label><br>
+          <input type="radio" id="luxury_car" name="car-type" value="200">
+          <label for="non-ac">Luxury Car ($200)</label><br>
+        </div>
+
+        <div id="bus-options" style="display: none;">
+          <h3>Bus Options:</h3>
+          <input type="radio" id="bus-ac" name="bus-type" value="100">
+          <label for="bus-ac">AC Bus ($100)</label><br>
+          <input type="radio" id="bus-non-ac" name="bus-type" value="80">
+          <label for="bus-non-ac">Non-AC Bus ($80)</label><br>
+        </div>
+
+        <div id="train-options" style="display: none;">
+          <h3>Train Options:</h3>
+          <input type="radio" id="general" name="train-type" value="80">
+          <label for="general">General ($80)</label><br>
+          <input type="radio" id="sleeper" name="train-type" value="100">
+          <label for="sleeper">Sleeper ($100)</label><br>
+          <input type="radio" id="first-tier-ac" name="train-type" value="300">
+          <label for="first-tier-ac">First Tier Ac ($300)</label><br>
+          <input type="radio" id="second-tier-ac" name="train-type" value="250">
+          <label for="second-tier-ac">Second Tier Ac ($250)</label><br>
+          <input type="radio" id="third-tier-ac" name="train-type" value="200">
+          <label for="third-tier-ac">Third Tier Ac ($200)</label><br>
+        </div>
+
+        <div id="flight-options" style="display: none;">
+          <h3>Flight Options:</h3>
+          <input type="radio" id="economy" name="flight-type" value="120">
+          <label for="economy">Economy ($120)</label><br>
+          <input type="radio" id="premium_economy" name="flight-type" value="150">
+          <label for="premium_economy">Premium Economy ($150)</label><br>
+          <input type="radio" id="first_class" name="flight-type" value="200">
+          <label for="first_class">First Class ($200)</label><br>
+          <input type="radio" id="business_class" name="flight-type" value="300">
+          <label for="business_class">Business Class ($300)</label><br>
+        </div>
+
+        <div id="bike-options" style="display: none;">
+          <h3>Bike Options:</h3>
+          <input type="radio" id="motor_bike" name="bike-type" value="100">
+          <label for="motor_bike">Normal Bike ($100)</label><br>
+          <input type="radio" id="mountain_bike" name="bike-type" value="150">
+          <label for="mountain_bike">Mountain Bike ($150)</label><br>
+          <input type="radio" id="scooter" name="bike-type" value="180">
+          <label for="non-ac">Scooter ($180)</label><br>
+          <input type="radio" id="normal_bike" name="bike-type" value="170">
+          <label for="normal_bike">Normal Bike ($170)</label><br>
+        </div>
+
+        <p id="total-price"></p>
+      </div>
+      <label>
+        <input type="checkbox" name="checked" id="checked">
+        I agree to terms and condition
+      </label><br>
+
+      <button type="submit" id="clickit">Submit</button>
+    </form>
+    <script>
+      const vehicleCheckboxes = document.querySelectorAll('input[name="vehicle"]');
+      const carRadios = document.querySelectorAll('input[name="car-type"]');
+      const busRadios = document.querySelectorAll('input[name="bus-type"]');
+      const trainRadios = document.querySelectorAll('input[name="train-type"]');
+      const bikeRadios = document.querySelectorAll('input[name="bike-type"]');
+      const flightRadios = document.querySelectorAll('input[name="flight-type"]');
+      const totalPriceParagraph = document.getElementById('total-price');
+      function calculateTotalPrice() {
+        let totalPrice = 0;
+        const carSelected = document.getElementById('car').checked;
+        if (carSelected) {
+          const selectedCarOption = Array.from(carRadios).find(radio => radio.checked);
+          if (selectedCarOption) {
+            totalPrice += parseInt(selectedCarOption.value);
+          }
+        }
+        const busSelected = document.getElementById('bus').checked;
+        if (busSelected) {
+          const selectedBusOption = Array.from(busRadios).find(radio => radio.checked);
+          if (selectedBusOption) {
+            totalPrice += parseInt(selectedBusOption.value);
+          }
+        }
+        const trainSelected = document.getElementById('train').checked;
+        if (trainSelected) {
+          const selectedTrainOption = Array.from(trainRadios).find(radio => radio.checked);
+          if (selectedTrainOption) {
+            totalPrice += parseInt(selectedTrainOption.value);
+          }
+        }
+        const bikeSelected = document.getElementById('bike').checked;
+        if (bikeSelected) {
+          const selectedBikeOption = Array.from(bikeRadios).find(radio => radio.checked);
+          if (selectedBikeOption) {
+            totalPrice += parseInt(selectedBikeOption.value);
+          }
+        }
+        const flightSelected = document.getElementById('flight').checked;
+        if (flightSelected) {
+          const selectedFlightOption = Array.from(flightRadios).find(radio => radio.checked);
+          if (selectedFlightOption) {
+            totalPrice += parseInt(selectedFlightOption.value);
+          }
+        }
+        totalPriceParagraph.textContent = `Total Price: $${totalPrice}`;
+      }
+      vehicleCheckboxes.forEach(checkbox => checkbox.addEventListener('change', () => {
+        if (checkbox.id === 'car') {
+          document.getElementById('car-options').style.display = checkbox.checked ? 'block' : 'none';
+        } else if (checkbox.id === 'bus') {
+          document.getElementById('bus-options').style.display = checkbox.checked ? 'block' : 'none';
+        } else if (checkbox.id === 'train') {
+          document.getElementById('train-options').style.display = checkbox.checked ? 'block' : 'none';
+        } else if (checkbox.id === 'bike') {
+          document.getElementById('bike-options').style.display = checkbox.checked ? 'block' : 'none';
+        } else if (checkbox.id === 'flight') {
+          document.getElementById('flight-options').style.display = checkbox.checked ? 'block' : 'none';
+        }
+        calculateTotalPrice();
+      }));
+      carRadios.forEach(radio => radio.addEventListener('change', calculateTotalPrice));
+      busRadios.forEach(radio => radio.addEventListener('change', calculateTotalPrice));
+      trainRadios.forEach(radio => radio.addEventListener('change', calculateTotalPrice));
+      bikeRadios.forEach(radio => radio.addEventListener('change', calculateTotalPrice));
+      flightRadios.forEach(radio => radio.addEventListener('change', calculateTotalPrice));
+      calculateTotalPrice();
+
+    </script>
+</body>
+
+</html>

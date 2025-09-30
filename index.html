@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="logo.png" type="image/icon">
+</head>
+
+<body>
+    <div class="mainContainer">
+        <div class="logo"></div>
+        <div class="navContainer">
+            <nav>
+                <ul>
+                    <li id="home"><a href="#">Home</a></li>
+                    <li><a href="#explore">Explore</a></li>
+                    <li><a href="#ourservice">Services</a></li>
+                    <li><a href="aboutus.html" target="_parent">About us</a></li>
+                    <li id="signUpButton">Sign Up</li>
+                    <li id="logInButton">Log In</li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <div id="signUpBox" class="hidden">
+        <h2>Sign Up</h2>
+        <form id="signUpForm">
+            <label for="username">Username:</label>
+            <input type="text" id="username" required><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" required><br>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" required><br>
+
+            <p id="clickit">Submit</p>
+        </form>
+    </div>
+    <div id="logInBox" class="hidden">
+        <h2>Log In</h2>
+        <form id="logInForm">
+            <label for="username">Username:</label>
+            <input type="text" id="username" required><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" required><br>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" required><br>
+
+            <p id="loginit">Submit</p>
+        </form>
+    </div>
+    <div class="searchBar">
+    </div>
+    <h1>Most Visit Places</h1>
+    <section class="collection">
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="content swiper-slide">
+                    <a href="photo/pashupati/kathmandu.html" style="color:white">
+                        <img src="photo/pashupati/Dharhara.jpeg" alt="Dharhara">
+                        <div class="text-content">
+                            <h3>Kathmandu / Balen City</h3><br>
+                    </a>
+                    <a href="https://en.wikipedia.org/wiki/Kathmandu" style="color:whitesmoke;">
+                        <h4 class="about_botton">About</h4><br>
+                    </a>
+                </div>
+            </div>
+            <div class="content swiper-slide">
+                <a href="photo/paris/paris.html" style="color:white;"><img src="paris.jpg" alt="">
+                    <div class="text-content">
+                        <h3>Paris</h3>
+                </a>
+                <a href="https://en.wikipedia.org/wiki/Eiffel_Tower" style="color:white;">
+                    <h4 class="about_botton">About</h4>
+                </a>
+            </div>
+        </div>
+        <div class="content swiper-slide">
+            <a href="photo/hyedrabad/hyderabad.html" style="color:white;"> <img src="photo/hyedrabad/Charminar.jpeg"
+                    alt="">
+                <div class="text-content">
+                    <h3>Hyderabad</h3>
+            </a>
+            <a href="https://en.wikipedia.org/wiki/Hyderabad" style="color:white;">
+                <h4 class="about_botton">About</h4>
+            </a>
+        </div>
+
+        </div>
+        <div class="content swiper-slide">
+            <a href="photo/usa/usa.html" style="color:whitesmoke"> <img src="usa.jpg" alt="">
+                <div class="text-content">
+                    <h3>USA</h3>
+            </a>
+            <a href="https://en.wikipedia.org/wiki/United_States" style="color:whitesmoke">
+                <h4 class="about_botton">About</h4>
+            </a>
+        </div>
+        </div>
+        <div class="content swiper-slide">
+            <a href="photo/banglore/bangalore.html" style="color:whitesmoke"><img
+                    src="photo/banglore/Sunset_at_Nagawara.jpg" alt="">
+                <div class="text-content">
+                    <h3>Bangalore</h3>
+            </a>
+            <a href="https://en.wikipedia.org/wiki/Bangalore" style="color:whitesmoke;">
+                <h4 class="about_botton">About</h4>
+            </a>
+        </div>
+        </div>
+        <div class="content swiper-slide">
+            <a href="photo/pokhara/pokhara.html" style="color:whitesmoke;"><img src="photo/pokhara/Davis_Falls.jpg"
+                    alt="">
+                <div class="text-content">
+                    <h3>Pokhara</h3>
+            </a>
+            <a href="https://en.wikipedia.org/wiki/Pokhara" style="color:whitesmoke">
+                <h4 class="about_botton">About</h4>
+            </a>
+        </div>
+        </div>
+        </div>
+        </div>
+    </section>
+
+  
+    <div id="explore">
+        <h2 class="title1">Most Popular Packages</h2>
+        <br>
+        <h3 class="title2">Families, couples, workaholics, adventures, find your own piece of paradise</h3><br><br>
+
+        <h1>Explore</h1>
+        <div class="imageContainer">
+            <div class="card">
+                <img src="usa.jpg" alt="usa"></a>
+
+                <div class="intro">
+                    <h5>USA<p style="position:absolute; bottom: 28vw;color:whitesmoke;font-size: 25px;"></p>
+                    </h5><br>
+                    <div class="botton">
+                        <button><a href="bookNow.html" style="text-decoration:none;">Book now</a></button>
+                        <button><a href="packages.html" style="text-decoration:none;">Packages</a></button>
+                        <button onclick="myfunction()">Favourite</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="photo/pokhara/Davis_Falls.jpg" alt="Pokhara">
+                <div class="intro">
+                    <h5>Pokhara <p style="position:absolute; bottom: 28vw;color:whitesmoke;font-size: 25px;"></p>
+                    </h5><br>
+                    <div class="botton">
+                        <button><a href="bookNow.html" style="text-decoration:none;">Book now</a></button>
+                        <button><a href="packages.html" style="text-decoration:none;">Packages</a></button>
+                        <button onclick="myfunction()">Favourite</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="paris.jpg" alt="Paris">
+
+                <div class="intro">
+                    <h5>Paris <p style="position:absolute; bottom: 28vw;color:whitesmoke;font-size: 25px;"></p>
+                    </h5><br>
+                    <div class="botton">
+                        <button><a href="bookNow.html" style="text-decoration:none;">Book now</a></button>
+                        <button><a href="packages.html" style="text-decoration:none;">Packages</a></button>
+                        <button onclick="myfunction()">Favourite</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="photo/banglore/Sunset_at_Nagawara.jpg" alt="Swambhunath">
+                <div class="intro2">
+                    <h5>Bangalore<p style="position:absolute; bottom: 28vw;color:whitesmoke;font-size: 25px;"></p>
+                    </h5><br>
+                    <div class="botton">
+                        <button><a href="bookNow.html" style="text-decoration:none;">Book now</a></button>
+                        <button><a href="packages.html" style="text-decoration:none;">Packages</a></button>
+                        <button onclick="myfunction()">Favourite</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="photo/hyedrabad/Charminar.jpeg" alt="Tirupati Balaji">
+
+                <div class="intro2">
+                    <h5>Hyedrabad<p style="position:absolute; bottom: 28vw;color:whitesmoke;font-size: 25px;"></p>
+                    </h5><br>
+                    <div class="botton">
+                        <button><a href="bookNow.html" style="text-decoration:none;">Book now</a></button>
+                        <button><a href="packages.html" style="text-decoration:none;">Packages</a></button>
+                        <button onclick="myfunction()">Favourite</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="photo/pashupati/Dharhara.jpeg" alt="KTM">
+                </a>
+                <div class="intro2">
+                    <h5>Kathmandu/Balen City<p
+                            style="position:absolute; bottom: 28vw;color:whitesmoke;font-size: 25px;"></p>
+                    </h5><br>
+                    <div class="botton">
+                        <button><a href="bookNow.html" style="text-decoration:none;">Book now</a></button>
+                        <button><a href="packages.html" style="text-decoration:none;">Packages</a></button>
+                        <button onclick="myfunction()">Favourite</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br><br>
+    <div id="ourservice">
+        <section>
+            <h1>Our Services</h1>
+            <div class="service">
+                <div class="serviceCard">
+                    <img src="per.jpg" alt="Rating" id="img1">
+                    <div class="int">
+                        <h3>100% Satisfaction</h3>
+                    </div>
+                </div>
+                <div class="serviceCard">
+                    <img src="social.jpg" alt="Social Media" id="img1">
+                    <div class="int">
+                        <h3>Connect in Social media</h3>
+                    </div>
+                </div>
+                <div class="serviceCard">
+                    <img src="rating_star.jpg" alt="" id="img1">
+                    <div class="int">
+                        <h3>Review rating</h3>
+                    </div>
+                </div>
+                <div class="serviceCard">
+                    <img src="247call.jpg" alt="Help Line" id="img1">
+                    <div class="int">
+                        <h3>Customer Support 24/7</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <iframe src="services.html" frameborder="2">
+    </iframe>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+        function myfunction() {
+            alert("Save to favourite!");
+        }
+    </script>
+</body>
+
+</html>

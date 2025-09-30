@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background: url('book.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        #close {
+            display: inline-block;
+            padding: 2px 5px;
+            background: #ccc;
+            position: absolute;
+            left: 45%;
+            top: 2%;
+
+        }
+
+        #bookBox {
+            height: 80vh;
+            width: 70%;
+            margin-left: 1%;
+            margin-top: 5%;
+            font-size: 23px;
+        }
+
+        #tname,
+        #age,
+        #password,
+        #email,
+        #phone {
+            width: 40%;
+            height: 4vh;
+            border-radius: 5px;
+            font-size: 20px;
+        }
+
+        #clickit {
+            font-size: 15px;
+            border-radius: 40px;
+            height: 40px;
+            width: 130px;
+            margin-left: 20%;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <a href="index.html"><span id='close'>x</span></a>
+    <div id="bookBox" class="hidden">
+        <form id="bookForm" name="bookDataHere">
+            <label for="tname">Traveler Name:</label>
+            <input type="text" id="tname" name="travelName" required placeholder="Full name (As per Govt.ID)"><br><br>
+
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" required placeholder="Enter your age....."><br><br>
+
+            <label for="email">Email:</label>
+            <input type="email" name="email" name="email" id="email" placeholder="Enter your email....."
+                required><br><br>
+
+            <label for="phone">Phone:</label>
+            <input type="number" name="phone" id="phone" placeholder="Enter your phone....." required><br><br>
+
+            <label for="gender">Gender:</label>
+            <input type="radio" name="gender" value="male"> Male
+            <input type="radio" name="gender" value="female"> Female<br><br>
+
+
+            <label for="nationality">Nationality:</label>
+            <select id="nationality" name="nationality">
+                <option value="nepal">Nepal</option>
+                <option value="paris">Paris</option>
+                <option value="india">India</option>
+                <option value="london">London</option>
+                <option value="usa">USA</option>
+                <option value="swizerland">Swizerland</option>
+            </select><br><br>
+
+            <div class="travel-options">Travel Preference:
+                <input type="radio" id="bus" name="travel-preference" value="bus">
+                <label for="bus">Bus</label>
+                <input type="radio" id="train" name="travel-preference" value="train">
+                <label for="train">Train</label>
+                <input type="radio" id="flight" name="travel-preference" value="flight">
+                <label for="flight">Flight</label>
+                <input type="radio" id="car" name="travel-preference" value="car">
+                <label for="car">Car</label>
+                <input type="radio" id="bike" name="travel-preference" value="bike">
+                <label for="bike">Bike</label>
+            </div>
+            <div class="options" style="display: none;">
+                <h2>Selected Travel Type:</h2>
+                <p id="selected-travel-type"></p>
+                <div id="bus-options" style="display: none;">
+                  <h3>Bus Options:</h3>
+                  <input type="checkbox" id="ac" name="ac" value="ac">
+                  <label for="ac">Ac</label><br>
+                  <input type="checkbox" id="non-ac" name="non-ac" value="non-ac">
+                  <label for="non-ac">Non-Ac</label><br>
+                  <input type="checkbox" id="none" name="none" value="none">
+                  <label for="none">None</label>
+                </div>
+                <div id="train-options" style="display: none;">
+                  <h3>Train Options:</h3>
+                  <input type="checkbox" id="sleeper" name="sleeper" value="sleeper">
+                  <label for="sleeper">Sleeper</label><br>
+                  <input type="checkbox" id="first-tier-ac" name="non-ac" value="non-ac">
+                  <label for="non-ac">First Tier Ac</label><br>
+                  <input type="checkbox" id="first-tier-ac" name="non-ac" value="non-ac">
+                  <label for="non-ac">Second Tier Ac</label><br>
+                  <input type="checkbox" id="first-tier-ac" name="non-ac" value="non-ac">
+                  <label for="non-ac">Third Tier Ac</label><br>
+                  <input type="checkbox" id="none1" name="none1" value="none1">
+                  <label for="none1">None</label>
+                </div>
+                <div id="flight-options" style="display: none;">
+                  <h3>Flight Options:</h3>
+                  <input type="checkbox" id="sleeper" name="sleeper" value="sleeper">
+                  <label for="sleeper">Economy</label><br>
+                  <input type="checkbox" id="first-tier-ac" name="non-ac" value="non-ac">
+                  <label for="non-ac">Premium Economy</label><br>
+                  <input type="checkbox" id="first-tier-ac" name="non-ac" value="non-ac">
+                  <label for="non-ac">First Class</label><br>
+                  <input type="checkbox" id="first-tier-ac" name="non-ac" value="non-ac">
+                  <label for="non-ac">Business Class</label><br>
+                  <input type="checkbox" id="none2" name="none2" value="none2">
+                  <label for="none2">None</label>
+                </div>
+                <div id="car-options" style="display: none;">
+                  <h3>Car Options:</h3>
+                  <input type="checkbox" id="sleeper" name="sleeper" value="sleeper">
+                  <label for="sleeper">Jeep</label><br>
+                  <input type="checkbox" id="first-tier-ac" name="non-ac" value="non-ac">
+                  <label for="non-ac">Normal Car</label><br>
+                  <input type="checkbox" id="first-tier-ac" name="non-ac" value="non-ac">
+                  <label for="non-ac">Luxury Car</label><br>
+                  <input type="checkbox" id="none3" name="none3" value="none3">
+                  <label for="none3">None</label>
+                </div>
+                <div id="bike-options" style="display: none;">
+                  <h3>Bike Options:</h3>
+                  <input type="checkbox" id="sleeper" name="sleeper" value="sleeper">
+                  <label for="sleeper">Motor Bike</label><br>
+                  <input type="checkbox" id="first-tier-ac" name="non-ac" value="non-ac">
+                  <label for="non-ac">Mountain Bike</label><br>
+                  <input type="checkbox" id="first-tier-ac" name="non-ac" value="non-ac">
+                  <label for="non-ac">Normal Bike</label><br>
+                  <input type="checkbox" id="none4" name="none4" value="none4">
+                  <label for="none4">None</label>
+                </div>
+              </div>
+
+            <button type="submit" id="clickit">Submit</button>
+        </form>
+    </div>
+    <script>
+        window.onload = function () {
+            document.getElementById('close').onclick = () => {
+                this.parentNode.parentNode.remove();
+                return false;
+            };
+        };
+
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbxEhmuFm2-XregIoM0pjTtjf90m55RdmyW_WvoJ1Q7FG3ZQ83-4Z4pIL04oMRs3xSQm/exec'
+        const form = document.forms['bookDataHere']
+
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => alert("Thank you"))
+                .then(() => { window.location.reload(); })
+                .catch(error => console.error('Error!', error.message))
+        })
+
+
+        const travelRadioButtons = document.querySelectorAll('.travel-options input[type="radio"]');
+        const optionsElement = document.querySelector('.options');
+        const selectedTravelTypeElement = document.querySelector('#selected-travel-type');
+        const busOptionsElement = document.querySelector('#bus-options');
+        const trainOptionsElement = document.querySelector('#train-options');
+        const flightOptionsElement = document.querySelector('#flight-options');
+        const carOptionsElement = document.querySelector('#car-options');
+        const bikeOptionsElement = document.querySelector('#bike-options');
+
+        travelRadioButtons.forEach((radioButton) => {
+            radioButton.addEventListener('change', () => {
+                const selectedTravelType = radioButton.value;
+                selectedTravelTypeElement.textContent = `You selected ${selectedTravelType} travel`;
+                switch (selectedTravelType) {
+                    case 'bus':
+                        trainOptionsElement.style.display = 'none';
+                        flightOptionsElement.style.display = 'none';
+                        carOptionsElement.style.display = 'none';
+                        bikeOptionsElement.style.display = 'none';
+                        busOptionsElement.style.display = 'block';
+                        break;
+                    case 'train':
+                        busOptionsElement.style.display = 'none';
+                        flightOptionsElement.style.display = 'none';
+                        carOptionsElement.style.display = 'none';
+                        bikeOptionsElement.style.display = 'none';
+                        trainOptionsElement.style.display = 'block';
+                        break;
+
+                    case 'flight':
+                        busOptionsElement.style.display = 'none';
+                        trainOptionsElement.style.display = 'none';
+                        carOptionsElement.style.display = 'none';
+                        bikeOptionsElement.style.display = 'none';
+                        flightOptionsElement.style.display = 'block';
+                        break;
+                    case 'car':
+                        busOptionsElement.style.display = 'none';
+                        trainOptionsElement.style.display = 'none';
+                        flightOptionsElement.style.display = 'none';
+                        bikeOptionsElement.style.display = 'none';
+                        carOptionsElement.style.display = 'block';
+                        break;
+                    case 'bike':
+                        busOptionsElement.style.display = 'none';
+                        trainOptionsElement.style.display = 'none';
+                        flightOptionsElement.style.display = 'none';
+                        carOptionsElement.style.display = 'none';
+                        bikeOptionsElement.style.display = 'block';
+                        break;
+                }
+                optionsElement.style.display = 'block';
+            });
+        });
+
+
+        const checkboxes = document.querySelectorAll('.options input[type="checkbox"]');
+    document.getElementById('none').addEventListener('change', () => {
+      if (document.getElementById('none').checked) {
+        checkboxes.forEach((checkbox) => checkbox.checked = checkbox.id === 'none');
+      }
+    });
+    const checkboxes1 = document.querySelectorAll('.options input[type="checkbox"]');
+    document.getElementById('none1').addEventListener('change', () => {
+      if (document.getElementById('none1').checked) {
+        checkboxes1.forEach((checkbox) => checkbox.checked = checkbox.id === 'none1');
+      }
+    });
+    const checkboxes2 = document.querySelectorAll('.options input[type="checkbox"]');
+    document.getElementById('none2').addEventListener('change', () => {
+      if (document.getElementById('none2').checked) {
+        checkboxes2.forEach((checkbox) => checkbox.checked = checkbox.id === 'none2');
+      }
+    });
+    const checkboxes3 = document.querySelectorAll('.options input[type="checkbox"]');
+    document.getElementById('none3').addEventListener('change', () => {
+      if (document.getElementById('none3').checked) {
+        checkboxes3.forEach((checkbox) => checkbox.checked = checkbox.id === 'none3');
+      }
+    });
+    const checkboxes4 = document.querySelectorAll('.options input[type="checkbox"]');
+    document.getElementById('none4').addEventListener('change', () => {
+      if (document.getElementById('none4').checked) {
+        checkboxes4.forEach((checkbox) => checkbox.checked = checkbox.id === 'none4');
+      }
+    });
+    </script>
+</body>
+
+</html>
